@@ -1,0 +1,48 @@
+---
+windows_tune_run_proxy: false
+windows_tune_proxy: "{{ http_proxy }}"
+
+windows_tune_run_customize: false
+windows_tune_run_disable_services: false
+windows_tune_common_svc:
+  - SharedAccess
+  - lltdsvc
+  - ScDeviceEnum
+  - wisvc
+windows_tune_core_svc:
+  - AxInstSV
+  - bthserv
+  - CDPUserSvc
+  - PimIndexMaintenanceSvc
+  - dmwappushservice
+  - MapsBroker
+  - lfsvc
+  - wlidsvc
+  # - NcbService
+  - PhoneSvc
+  - Spooler
+  - PrintNotify
+  - PcaSvc
+  - QWAVE
+  - RmSvc
+  - SensorDataService
+  - SensrSvc
+  - SensorService
+  - ShellHWDetection
+  - SSDPSRV
+  - WiaRpc
+  - TabletInputService
+  - upnphost
+  - UserDataSvc
+  - WalletService
+  - Audiosrv
+  - AudioEndpointBuilder
+  - FrameServer
+  - stisvc
+  - icssvc
+  - WpnService
+  - WpnUserService
+
+windows_tune_run_disable_ipv6: false
+windows_tune_run_upgrade: true
+windows_tune_run_cleanup: true
