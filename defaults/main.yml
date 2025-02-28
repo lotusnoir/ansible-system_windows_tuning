@@ -44,5 +44,5 @@ windows_tune_core_svc:
   - WpnUserService
 
 windows_tune_run_disable_ipv6: false
-windows_tune_run_upgrade: true
-windows_tune_run_cleanup: true
+windows_tune_run_upgrade: false
+windows_tune_run_cleanup: false
