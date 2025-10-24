@@ -22,6 +22,7 @@
 ## Description
 
 Configure windows host
+
 ## Requirements
 
 none
@@ -39,7 +40,6 @@ See [variables](/defaults/main.yml) for more details.
           gather_facts: true
           roles:
             - role: ansible-system_windows_tuning
-
 
 ## License
 
