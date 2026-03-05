@@ -33,4 +33,10 @@
 
       ## Remove all files and folders in user's Temporary Internet Files.
       Get-ChildItem "C:\users\*\AppData\Local\Microsoft\Windows\Temporary Internet Files\*" -Recurse -Force -Verbose -ErrorAction SilentlyContinue | Remove-Item -Force -recurse -ErrorAction SilentlyContinue
-    changed_when: false
+  changed_when: false
+
+- name: "Clear Event Logs"
+  ansible.windows.win_powershell:
+    script: |
+      Write-Output "Clear Event Logs"
+      Get-EventLog -LogName * | ForEach-Object { Clear-EventLog -LogName $_.Log } -Verbose | Out-Null

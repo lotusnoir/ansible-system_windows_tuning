@@ -83,7 +83,7 @@
 
 - name: "Disable hibernation"
   ansible.windows.win_powershell:
-    cript: |
+    script: |
       Set-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\Power" -Name "HiberFileSizePercent" -Value 0
       Set-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\Power" -Name "HibernateEnabled" -Value 0
 
@@ -134,9 +134,3 @@
       # Disable VMware Tools System Tray Icon
       Write-Output "Disable VMware Tools icon in System Tray"
       Set-ItemProperty -Path 'HKLM:\SOFTWARE\VMware, Inc.\VMware Tools' -Name 'ShowTray' -Value 0 | Out-Null
-
-- name: "Clear Event Logs"
-  ansible.windows.win_powershell:
-    script: |
-      Write-Output "Clear Event Logs"
-      Get-EventLog -LogName * | ForEach-Object { Clear-EventLog -LogName $_.Log } -Verbose | Out-Null

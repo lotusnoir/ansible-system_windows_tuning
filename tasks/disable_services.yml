@@ -10,7 +10,7 @@
   ansible.windows.win_reg_stat:
     path: HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion
     name: InstallationType
-  register: os_version
+  register: __os_version
 
 - name: "Disable Core experience services "
   ansible.windows.win_service:
@@ -18,4 +18,4 @@
     start_mode: disabled
     state: stopped
   with_items: "{{ windows_tune_core_svc }}"
-  when: os_version.value == "Server"
+  when: __os_version.value == "Server"

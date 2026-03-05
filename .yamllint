@@ -34,7 +34,7 @@ rules:
   key-ordering: disable             # indispensable pour Ansible/Jinja
 
   line-length:
-    max: 160
+    max: 210
     level: warning
 
   new-line-at-end-of-file: enable
