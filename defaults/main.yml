@@ -46,3 +46,4 @@ windows_tune_core_svc:
 windows_tune_run_disable_ipv6: false
 windows_tune_run_upgrade: false
 windows_tune_run_cleanup: false
+windows_tune_add_ping_rule: false

@@ -22,3 +22,7 @@
 - name: Cleanup tasks
   ansible.builtin.include_tasks: cleanup.yml
   when: windows_tune_run_cleanup
+
+- name: Ping rule tasks
+  ansible.builtin.include_tasks: add_ping_rule.yml
+  when: windows_tune_add_ping_rule
