@@ -17,5 +17,6 @@
     name: "{{ item }}"
     start_mode: disabled
     state: stopped
+  failed_when: false
   with_items: "{{ windows_tuning_server_svc }}"
   when: __os_version.value == "Server"
