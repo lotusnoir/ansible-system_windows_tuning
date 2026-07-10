@@ -99,10 +99,10 @@
       powercfg /change hibernate-timeout-ac 0
       powercfg /change hibernate-timeout-dc 0
 
-- name: "Disable password expiration for Administrator"
+- name: "Disable password expiration for Admin user"
   ansible.windows.win_powershell:
     script: |
-      Set-LocalUser Administrateur -PasswordNeverExpires $true
+      Set-LocalUser {{ windows_tuning_admin_username }} -PasswordNeverExpires $true
 
 - name: "Set Temp Variable using PowerShell"
   ansible.windows.win_powershell:

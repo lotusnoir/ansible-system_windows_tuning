@@ -4,7 +4,7 @@
     name: "{{ item }}"
     start_mode: disabled
     state: stopped
-  with_items: "{{ windows_tune_common_svc }}"
+  with_items: "{{ windows_tuning_common_svc }}"
 
 - name: "Determine if Core or Desktop Experience"
   ansible.windows.win_reg_stat:
@@ -17,5 +17,5 @@
     name: "{{ item }}"
     start_mode: disabled
     state: stopped
-  with_items: "{{ windows_tune_core_svc }}"
+  with_items: "{{ windows_tuning_server_svc }}"
   when: __os_version.value == "Server"

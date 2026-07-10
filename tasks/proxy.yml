@@ -12,4 +12,4 @@
 - name: "Configure IE to use explicit proxy host with port and without auto detection"
   community.windows.win_inet_proxy:
     auto_detect: false
-    proxy: "{{ windows_tune_proxy }}"
+    proxy: "{{ windows_tuning_proxy }}"

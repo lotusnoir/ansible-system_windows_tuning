@@ -1,15 +1,19 @@
 ---
-windows_tune_run_proxy: false
-windows_tune_proxy: "{{ http_proxy }}"
+### Proxy settings
+windows_tuning_set_proxy: false
+windows_tuning_proxy: "{{ http_proxy }}"
 
-windows_tune_run_customize: false
-windows_tune_run_disable_services: false
-windows_tune_common_svc:
+### system settings
+windows_tuning_customize: false
+windows_tuning_admin_username: "Administrateur"
+
+windows_tuning_disable_services: false
+windows_tuning_common_svc:
   - SharedAccess
   - lltdsvc
   - ScDeviceEnum
   - wisvc
-windows_tune_core_svc:
+windows_tuning_server_svc:
   - AxInstSV
   - bthserv
   - CDPUserSvc
@@ -43,7 +47,11 @@ windows_tune_core_svc:
   - WpnService
   - WpnUserService
 
-windows_tune_run_disable_ipv6: false
-windows_tune_run_upgrade: false
-windows_tune_run_cleanup: false
-windows_tune_add_ping_rule: false
+windows_tuning_disable_ipv6: false
+windows_tuning_allow_rdp: false
+windows_tuning_set_timezone: false
+windows_tuning_timezone: "Romance Standard Time"
+windows_tuning_add_ping_rule: false
+
+windows_tuning_system_upgrade: false
+windows_tuning_cleanup: false
