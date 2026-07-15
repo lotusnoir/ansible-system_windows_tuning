@@ -27,6 +27,10 @@
   ansible.builtin.include_tasks: add_ping_rule.yml
   when: windows_tuning_add_ping_rule
 
+- name: Users rule tasks
+  ansible.builtin.include_tasks: add_users.yml
+  when: windows_tuning_add_users | default([]) | length > 0
+
 - name: Upgrade tasks
   ansible.builtin.include_tasks: upgrade.yml
   when: windows_tuning_system_upgrade

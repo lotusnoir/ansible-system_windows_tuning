@@ -52,6 +52,17 @@ windows_tuning_allow_rdp: false
 windows_tuning_set_timezone: false
 windows_tuning_timezone: "Romance Standard Time"
 windows_tuning_add_ping_rule: false
+windows_tuning_add_users: []
+#  - name: app-ansible
+#    password: "xxxxxxxxxxxxx"
+#    groups:
+#      - Administrators
+#      - "Remote Desktop Users"
+#
+#  - name: monitoring
+#    password: "yyyyyyyyyyyyyyyyy"
+#    groups:
+#      - Users
 
 windows_tuning_system_upgrade: false
 windows_tuning_cleanup: false
